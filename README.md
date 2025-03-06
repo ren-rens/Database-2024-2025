@@ -2,4 +2,4 @@
 Code from Database seminars in FMI year 2024/2025
 
 # TO DO:
-Add the quries for pc and ships in week 1-3
+Add the quries for ships in week 1-3
