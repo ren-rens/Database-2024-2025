@@ -31,8 +31,16 @@ HAVING product.maker = 'A';
 
 --5. Напишете заявка, която извежда средната цена на персоналните компютри и
 --лаптопите за производител ‘B’.
-
-
+SELECT product.maker, AVG(result.price)
+FROM (SELECT laptop.price, laptop.model 
+      FROM laptop
+      UNION ALL
+      SELECT pc.price, pc.model
+      FROM pc) AS RESULT 
+JOIN product
+ON RESULT.model = product.model
+GROUP BY product.maker
+HAVING product.maker = 'B';
 
 --6. Напишете заявка, която извежда средната цена на персоналните компютри
 --според различните им честоти.
