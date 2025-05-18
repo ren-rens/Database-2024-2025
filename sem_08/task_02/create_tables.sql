@@ -1,4 +1,3 @@
-USE master;
 USE rebcho;
 
 --а) Нека създадем мини вариант на Facebook. Искаме да имаме следните
@@ -11,6 +10,7 @@ USE rebcho;
 -- Groups: уникален номер, име, описание (по подразбиране - празен низ).
 -- GroupMembers: двойки от вида номер на група - номер на потребител.
 --б) Добавете кортежи с примерни данни към новосъздадените релации.
+
 
 CREATE TABLE USERS
 (
@@ -42,5 +42,6 @@ DESCRIP VARCHAR(100) DEFAULT ''
 
 CREATE TABLE GROUPMEMBERS
 (
-GROUPIDS CHAR(7)
+GROUPIDS CHAR(110)
 );
+
